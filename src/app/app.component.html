@@ -23,7 +23,8 @@
       </ol>
       <button type="button" (click)="paragrafOFF()">Display Details</button>
 
-      <p *ngIf="paragrafStatusOn">Display visible</p>
+      <p *ngIf="paragrafStatusOn; else peter">Display visible</p>
+      <ng-template #peter>Other P visible </ng-template> WERT: {{ paragrafStatusOn }}
     </div>
   </div>
 </div>
