@@ -14,17 +14,23 @@
         <li>
           Log all button clicks in an array and output that array below the
           secret paragraph (maybe log a timestamp or simply an incrementing
-          number)
+          number)👍👍👍
         </li>
         <li>
           Starting at the 5th log item, give all future log items a blue
           background (via ngStyle) and white color (ngClass)
         </li>
       </ol>
-      <button type="button" (click)="paragrafOFF()">Display Details</button>
+      <button (click)="onCreateServer()">Add S</button>
 
-      <p *ngIf="paragrafStatusOn; else peter">Display visible</p>
-      <ng-template #peter>Other P visible </ng-template> WERT: {{ paragrafStatusOn }}
+      <!--   <p *ngIf="serverStatus; else peter">Display visible</p>
+      <ng-template #peter>Other P visible </ng-template> WERT:
+      {{ serverStatus }} -->
+      <!-- <div *ngFor="let click of clicks">{{ click }}</div>  <p *ngIf="serverCreated"></p>-->
+
+      <p *ngIf="serverStatus" [ngStyle]="{ backgroundColor: 'red' }">
+        {{ serverStatus }}
+      </p>
     </div>
   </div>
 </div>
