@@ -14,15 +14,9 @@ export class AppComponent {
   }
 
   onCreateServer() {
-    console.log(this.serverStatus);
     this.serverStatus = !this.serverStatus;
-    return this.serverStatus;
-
-    /*this.clicks.push(this.clicks.length + 1);
-    console.log(this.clicks); */
-  }
-
-  getServerStatus() {
+    this.clicks.push(this.clicks.length + 1);
+    console.log(this.clicks.length);
     return this.serverStatus;
   }
 }

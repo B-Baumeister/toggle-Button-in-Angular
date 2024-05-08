@@ -26,10 +26,13 @@
       <!--   <p *ngIf="serverStatus; else peter">Display visible</p>
       <ng-template #peter>Other P visible </ng-template> WERT:
       {{ serverStatus }} -->
-      <!-- <div *ngFor="let click of clicks">{{ click }}</div>  <p *ngIf="serverCreated"></p>-->
+      <!--  <p *ngIf="serverCreated"></p>-->
 
-      <p *ngIf="serverStatus" [ngStyle]="{ backgroundColor: 'red' }">
-        {{ serverStatus }}
+      <p
+        *ngFor="let click of clicks"
+        [ngStyle]="{ backgroundColor: clicks.length >= 5 ? 'blue' : 'red' }"
+      >
+        {{ clicks }}
       </p>
     </div>
   </div>
